@@ -97,7 +97,28 @@ const FeedsScreen = () => {
               </VStack>
             </Tabs.TabPanel>
             <Tabs.TabPanel value="tab2">
-              <Text>Some content for Tab 2</Text>
+              <VStack marginTop="$4">
+                <ScrollView
+                  style={{
+                    width: "100%",
+                    height: "93%",
+                  }}
+                  showsVerticalScrollIndicator={false}
+                >
+                  <View
+                    maxWidth="$40"
+                    backgroundColor="$#FFF8E7"
+                    padding="$4"
+                    alignSelf="center"
+                  >
+                    <Text fontSize="$sm">Today, 10th of March</Text>
+                  </View>
+                  <FeedbackCard />
+                  <FeedbackCard />
+                  <FeedbackCard />
+                  <FeedbackCard />
+                </ScrollView>
+              </VStack>
             </Tabs.TabPanel>
           </Tabs.TabPanels>
         </Tabs>
