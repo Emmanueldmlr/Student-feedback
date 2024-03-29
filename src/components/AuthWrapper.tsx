@@ -1,7 +1,6 @@
 import { Button, Icon, Text, View, VStack } from "@gluestack-ui/themed";
 import React, { ReactNode } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { Pressable, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 const AuthWrapper = ({
@@ -18,6 +17,12 @@ const AuthWrapper = ({
   hasForgotElement?: boolean;
 }) => {
     const router = useNavigation();
+
+  const handleAuth = () => {
+    if (hasForgotElement) {
+      router.navigate("Main" as never);
+    }
+  }
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View
@@ -28,7 +33,7 @@ const AuthWrapper = ({
         alignContent="center"
       >
         <VStack marginBottom="$10">
-          <VStack gap="$2" marginBottom="$6" alignItems="center">
+          <VStack gap="$2" marginBottom="$10" alignItems="center">
             <Icon as={icon} size="xl" color="black" />
             <Text fontSize="$2xl" textAlign="center" color="#333333">
               {title}
@@ -46,7 +51,7 @@ const AuthWrapper = ({
               Forgot Password?
             </Text>
           )}
-          <Button marginTop="$10" backgroundColor="#154604" size="xl">
+          <Button marginTop="$10" backgroundColor="#154604" size="xl" onPress={handleAuth}>
             <Text color="white" fontWeight="$bold">
               {buttonTitle}
             </Text>
