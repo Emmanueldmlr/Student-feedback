@@ -2,6 +2,7 @@ import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack';
 import { RootStackParamList } from '../types/NavigationType';
 import LoginScreen from '../screens/Login';
+import RegistrationScreen from '../screens/Register';
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -21,11 +22,16 @@ const StackNavigation = () => {
         headerBackTitleVisible: false,
       }}
       // initialRouteName={user ? "Home" : isOnboarded ? "Login" : "Splash"}
-      initialRouteName={ "Login"}
+      initialRouteName={"Login"}
     >
       <Stack.Screen
         name="Login"
         component={LoginScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Signup"
+        component={RegistrationScreen}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

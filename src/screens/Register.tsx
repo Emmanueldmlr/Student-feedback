@@ -1,17 +1,17 @@
 import { Text, Input, InputField } from "@gluestack-ui/themed";
-
+import { UserRoundPlus } from "lucide-react-native";
 import React from "react";
-import { LoginIcon } from "../icons/LoginIcon";
 import AuthWrapper from "../components/AuthWrapper";
-import { LogIn } from "lucide-react-native";
+import { RegisterIcon } from "../icons/RegisterIcon";
 
-const LoginScreen = () => {
+
+const RegistrationScreen = () => {
   return (
     <AuthWrapper
-      hasForgotElement={true}
-      icon={LogIn}
-      buttonTitle="Login"
-      title="Login to your account"
+      icon={UserRoundPlus}
+      buttonTitle="Sign up"
+      title="Create a new account"
+
     >
       <Text fontSize="$md" color="#121212" marginBottom="$2">
         Email
@@ -29,4 +29,4 @@ const LoginScreen = () => {
   );
 };
 
-export default LoginScreen;
+export default RegistrationScreen;
