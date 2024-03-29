@@ -12,6 +12,7 @@
     "@expo/html-elements": "latest",
     "@gluestack-style/react": "latest",
     "@gluestack-ui/config": "latest",
+    "@gluestack-ui/tabs": "^0.1.16",
     "@gluestack-ui/themed": "latest",
     "@legendapp/motion": "latest",
     "@react-navigation/bottom-tabs": "^6.5.20",

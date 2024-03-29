@@ -28,7 +28,7 @@ const BottomScreen = ({ navigation, route }: MainScreenProps) => {
             iconName = User;
           }
           const iconColor = focused ? "#2B6F13" : "#333333";
-          return <Icon as={iconName} size="xl" color={iconColor} />;
+          return <Icon as={iconName} size="lg" color={iconColor} />;
         },
         headerTitleAlign: "center",
         headerTintColor: "#333333",
