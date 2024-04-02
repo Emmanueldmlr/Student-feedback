@@ -14,24 +14,14 @@ import { MessageCircle, Search, Upload } from "lucide-react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { FeedbackCard } from "../components/FeedbackCard";
+import Header from "../components/Header";
 
 const FeedsScreen = () => {
   const [tabState, setTabState] = React.useState("tab1");
   return (
     <SafeAreaView>
       <VStack padding="$4" marginBottom="$8">
-        <Input borderColor="#E1E1E1" size="lg" rounded="$lg">
-          <InputSlot marginLeft="$4">
-            <InputIcon>
-              <Icon as={Search} />
-            </InputIcon>
-          </InputSlot>
-          <InputField
-            color="$black"
-            fontSize="$sm"
-            placeholder="Search for anything"
-          />
-        </Input>
+        <Header/>
         <Tabs value="tab1" marginTop="$2">
           <Tabs.TabList
             borderBottomColor="$#D9D9D9"
