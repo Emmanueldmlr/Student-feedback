@@ -1,9 +1,7 @@
 import { Image, Text } from '@gluestack-ui/themed';
 import { HStack, Icon, VStack } from '@gluestack-ui/themed';
-import { IconNode } from 'lucide-react-native';
 import React from 'react'
 import { ImageSourcePropType } from 'react-native/types';
-import { ResolvedIcon } from '../icons/ResolvedIcon';
 
 const NotificationCard = ({icon, image, title, text}: {
     icon: any;
